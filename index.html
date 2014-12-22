@@ -5,14 +5,53 @@
     <script>
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
+        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser      
+
+        //MAIN FUNCTIONALITY
+        var mainElement = document.getElementById('master'); 
+       // console.log(mainElement);       
+
+        for (var index = 0; index < window.geemails.length; index++) {
+          var currentMessage = window.geemails[index];
+          // currentMessage = {
+          //   sender: 'Some sender',
+          //   body: 'some body',
+          //   date: Date.now(),
+          //   subject: 'Some Subject'
+          // }
+          var sender = currentMessage.sender;
+          var body = currentMessage.body;
+          var date = currentMessage.date;
+          var subject = currentMessage.subject;
+          
+          var mySenderElement = document.createElement('div');
+          mySenderElement.innerHTML = sender;
+          mainElement.appendChild(mySenderElement);
+          var myBodyElement = document.createElement('div');
+          myBodyElement.innerHTML = body;
+          mainElement.appendChild(myBodyElement);
+          var myDateElement = document.createElement('div');
+          myDateElement.innerHTML = date;
+          mainElement.appendChild(myDateElement);
+          var mySubjectElement = document.createElement('div');
+          mySubjectElement.innerHTML = subject;
+          mainElement.appendChild(mySubjectElement);
+          mySubjectElement.className = 'subject';
+        }
       };
     </script>
 	</head>
+  <title>Gee-Mail</title>
 	<body>
-		<div class="container" id="main">
-			Build Me!
+		<div class="container" id="master">
+      <div>
+        Some sender
+      </div>
+      <div>
+        Inbox
+      </div>
 		</div>
+
+    <h1>weathergreen</h1>
 	</body>
 </html>
