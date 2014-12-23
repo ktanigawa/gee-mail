@@ -27,17 +27,55 @@
           var mySenderElement = document.createElement('div');
           mySenderElement.innerHTML = sender;
           mainElement.appendChild(mySenderElement);
+          
           var myBodyElement = document.createElement('div');
           myBodyElement.innerHTML = body;
           mainElement.appendChild(myBodyElement);
+          
           var myDateElement = document.createElement('div');
           myDateElement.innerHTML = date;
           mainElement.appendChild(myDateElement);
+          
           var mySubjectElement = document.createElement('div');
           mySubjectElement.innerHTML = subject;
           mainElement.appendChild(mySubjectElement);
           mySubjectElement.className = 'subject';
         }
+        function addNewMessage(){
+          //  console.log(addNewMessage);
+          // Get the new message.
+          var message = getNewMessage();
+          //console.log(message);
+          var sender = message.sender;
+          //console.log(sender);
+          var body = message.body;
+          // Add new message to page.
+          var subject = message.subject;
+          //console.log(subject);
+          var date = message.date;
+
+          var myMessageElement = document.createElement('div');
+          myMessageElement.innerHTML = message;
+          mainElement.appendChild(myMessageElement);
+
+          var mySenderElement = document.createElement('div');
+          mySenderElement.innerHTML = sender;
+          mainElement.appendChild(mySenderElement);
+
+          var mySubjectElement = document.createElement('div');
+          mySubjectElement.innerHTML = subject;
+          mainElement.appendChild(mySubjectElement);
+
+          var myDateElement = document.createElement('div');
+          myDateElement.innerHTML = date;
+          mainElement.appendChild(myDateElement);
+
+          var myBodyElement = document.createElement('div');
+          myBodyElement.innerHTML = body;
+          mainElement.appendChild(myBodyElement);
+
+        }
+        var interval = setInterval(addNewMessage, 1000);
       };
     </script>
 	</head>
@@ -45,13 +83,12 @@
 	<body>
 		<div class="container" id="master">
       <div>
+        Inbox
+         <h1>weathergreen</h1>
+      </div>
+            <div>
         Some sender
       </div>
-      <div>
-        Inbox
-      </div>
 		</div>
-
-    <h1>weathergreen</h1>
 	</body>
 </html>
