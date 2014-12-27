@@ -54,9 +54,9 @@
           //console.log(subject);
           var date = message.date;
 
-          var myMessageElement = document.createElement('div');
-          myMessageElement.innerHTML = message;
-          mainElement.appendChild(myMessageElement);
+        //  var myMessageElement = document.createElement('div');
+         // myMessageElement.innerHTML = message;
+         // mainElement.appendChild(myMessageElement);
 
           var mySenderElement = document.createElement('div');
           mySenderElement.innerHTML = sender;
@@ -72,10 +72,9 @@
 
           var myBodyElement = document.createElement('div');
           myBodyElement.innerHTML = body;
-          mainElement.appendChild(myBodyElement);
-
+          mainElement.appendChild(myBodyElement);       
         }
-        var interval = setInterval(addNewMessage, 1000);
+        var interval = setInterval(addNewMessage, 2000); 
       };
     </script>
 	</head>
